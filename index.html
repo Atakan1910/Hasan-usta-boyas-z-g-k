@@ -737,7 +737,9 @@ a:hover {
             quickQuoteText: 'Aracınızdaki göçüğün veya hasarın fotoğrafını farklı açılardan çekip bize gönderin. Orijinalliği bozmadan yapılabilecek işlemi ve ortalama fiyatı anında iletelim.',
             quickQuoteButton: 'WhatsApp\'tan Gönder',
             locationTitle: 'Konumumuz',
-            whatsappButtonText: 'WhatsApp'
+            whatsappButtonText: 'WhatsApp',
+            badgeBefore: 'ÖNCESİ',
+            badgeAfter: 'SONRASI'
         },
         'en': {
             pageTitle: 'Hasan Usta Paintless Dent Repair Center',
@@ -789,7 +791,9 @@ a:hover {
             quickQuoteText: 'Send us photos of the dent or damage on your vehicle from different angles. We will instantly let you know the possible repair process without ruining the originality and the estimated price.',
             quickQuoteButton: 'Send via WhatsApp',
             locationTitle: 'Our Location',
-            whatsappButtonText: 'WhatsApp'
+            whatsappButtonText: 'WhatsApp',
+            badgeBefore: 'BEFORE',
+            badgeAfter: 'AFTER'
         }
     };
     let currentLang = 'tr';
@@ -963,40 +967,82 @@ a:hover {
         </section>
         <!-- Portfolio Section -->
         <section id="portfolio" class="portfolio-section section-padding">
-            <div class="container">
-                <h2 class="section-title" data-translate="portfolioTitle" data-aos="fade-up">İşlerimiz / Portfolyo</h2>
-                <p class="section-subtitle" data-translate="portfolioSubtitle" data-aos="fade-up" data-aos-delay="100">Araçlarınızdaki değişimi kendiniz görün.</p>
-                <div class="before-after-sliders">
-                    <div class="before-after-slider" data-aos="fade-up" data-aos-delay="200">
-                        <h3 class="slider-title" data-translate="portfolioCar1">Peugeot 2008</h3>
-                        <div class="slider-wrapper">
-                            <div class="image-container">
-                                <img src="2008 önce.png" alt="Before Peugeot 2008" class="before-image">
-                                <img src="2008 sonra.png" alt="After Peugeot 2008" class="after-image">
-                            </div>
-                        </div>
+    <div class="container">
+        <h2 class="section-title" data-translate="portfolioTitle" data-aos="fade-up">İşlerimiz / Portfolyo</h2>
+        <p class="section-subtitle" data-translate="portfolioSubtitle" data-aos="fade-up" data-aos-delay="100">Araçlarınızdaki değişimi kendiniz görün.</p>
+
+        <style>
+          
+            .portfolio-grid-new { display: flex; flex-direction: column; gap: 60px; max-width: 1000px; margin: 0 auto; }
+            .portfolio-item { background-color: var(--color-secondary-bg); border-radius: 8px; padding: 30px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); border: 1px solid var(--color-border); }
+            .portfolio-car-title { font-family: var(--font-display); font-size: 2.2em; text-align: center; color: var(--color-text-light); margin-bottom: 25px; letter-spacing: 1px; }
+            .compare-box { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+            .image-box { position: relative; border-radius: 5px; overflow: hidden; border: 2px solid var(--color-border); }
+            .image-box img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s ease; }
+            .image-box:hover img { transform: scale(1.05); }
+            .badge { position: absolute; top: 15px; left: 15px; padding: 8px 15px; font-family: var(--font-display); font-size: 1.2em; border-radius: 3px; z-index: 2; letter-spacing: 1px; box-shadow: 0 2px 5px rgba(0,0,0,0.5); }
+            
+            /* Renkler site temasına uyarlandı */
+            .before-badge { 
+                background-color: rgba(26, 26, 26, 0.85); /* Sitenin koyu gri arka planı (hafif saydam) */
+                border: 1px solid var(--color-border); 
+                color: var(--color-text-dark); 
+            } 
+            .after-badge { 
+                background-color: var(--color-accent); /* Sitenin canlı turuncu rengi */
+                border: 1px solid var(--color-accent);
+                color: var(--color-text-light); 
+            }  
+            
+            @media (max-width: 768px) { .compare-box { grid-template-columns: 1fr; } }
+        
+        </style>
+
+        <div class="portfolio-grid-new">
+            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="portfolio-car-title" data-translate="portfolioCar1">Peugeot 2008</h3>
+                <div class="compare-box">
+                    <div class="image-box">
+                        <span class="badge before-badge" data-translate="badgeBefore">ÖNCESİ</span>
+                        <img src="2008 önce.png" alt="Peugeot 2008 Öncesi">
                     </div>
-                    <div class="before-after-slider" data-aos="fade-up" data-aos-delay="300">
-                        <h3 class="slider-title" data-translate="portfolioCar2">Seat İbiza</h3>
-                        <div class="slider-wrapper">
-                            <div class="image-container">
-                                <img src="ibiza önce.png" alt="Before Seat İbiza" class="before-image">
-                                <img src="ibiza sonra.png" alt="After Seat ibiza" class="after-image">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="before-after-slider" data-aos="fade-up" data-aos-delay="400">
-                        <h3 class="slider-title" data-translate="portfolioCar3">Audi A5</h3>
-                        <div class="slider-wrapper">
-                            <div class="image-container">
-                                <img src="a5 önce.png" alt="Before Audi A5" class="before-image">
-                                <img src="a5 sonra.png" alt="After Audi A5" class="after-image">
-                            </div>
-                        </div>
+                    <div class="image-box">
+                        <span class="badge after-badge" data-translate="badgeAfter">SONRASI</span>
+                        <img src="2008 sonra.png" alt="Peugeot 2008 Sonrası">
                     </div>
                 </div>
             </div>
-        </section>
+
+            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="portfolio-car-title" data-translate="portfolioCar2">Seat İbiza</h3>
+                <div class="compare-box">
+                    <div class="image-box">
+                        <span class="badge before-badge" data-translate="badgeBefore">ÖNCESİ</span>
+                        <img src="ibiza önce.png" alt="Seat İbiza Öncesi">
+                    </div>
+                    <div class="image-box">
+                        <span class="badge after-badge" data-translate="badgeAfter">SONRASI</span>
+                        <img src="ibiza sonra.png" alt="Seat İbiza Sonrası">
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="400">
+                <h3 class="portfolio-car-title" data-translate="portfolioCar3">Audi A5</h3>
+                <div class="compare-box">
+                    <div class="image-box">
+                        <span class="badge before-badge" data-translate="badgeBefore">ÖNCESİ</span>
+                        <img src="a5 önce.png" alt="Audi A5 Öncesi">
+                    </div>
+                    <div class="image-box">
+                        <span class="badge after-badge" data-translate="badgeAfter">SONRASI</span>
+                        <img src="a5 sonra.png" alt="Audi A5 Sonrası">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     </main>
     <footer id="contact" class="footer-section section-padding">
         <div class="container">
