@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="pageTitle">Hasan Usta Boyasız Göçük Düzeltme Merkezi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+    --color-primary-bg: #1a1a1a;
+    --color-secondary-bg: #2a2a2a;
+    --color-accent: #e6782a;
+    --color-text-light: #ffffff;
+    --color-text-dark: #cccccc;
+    --color-border: #444444;
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
+    --header-height: 80px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: var(--font-body);
+    color: var(--color-text-light);
+    background-color: var(--color-primary-bg);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: var(--color-text-light);
+}
+/* Header */
+.main-header {
+    background-color: rgba(26, 26, 26, 0.95);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--header-height);
+}
+.main-header .logo img {
+    height: 50px; 
+    filter: brightness(1.2); 
+}
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+.main-nav ul li {
+    margin-left: 30px;
+}
+.main-nav ul li a {
+    color: var(--color-text-light);
+    font-family: var(--font-display);
+    font-size: 1.1em;
+    padding: 5px 0;
+    position: relative;
+    letter-spacing: 1px;
+}
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-accent);
+    transition: width 0.3s ease;
+}
+.main-nav ul li a:hover::after {
+    width: 100%;
+}
+.language-switcher {
+    margin-left: 30px;
+}
+.lang-btn {
+    background: none;
+    border: 1px solid var(--color-text-dark);
+    color: var(--color-text-dark);
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+.lang-btn.active,
+.lang-btn:hover {
+    background-color: var(--color-accent);
+    color: var(--color-text-light);
+    border-color: var(--color-accent);
+}
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    justify-content: space-between;
+}
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-text-light);
+    transition: all 0.3s ease;
+}
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    padding-top: var(--header-height);
+}
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+.hero-title {
+    font-family: var(--font-display);
+    font-size: 4.5em;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    color: var(--color-text-light);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+.hero-subtitle {
+    font-family: var(--font-body);
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    color: var(--color-text-dark);
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+.hero-buttons .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+.btn-primary {
+    background-color: var(--color-accent);
+    color: var(--color-text-light);
+    border: 2px solid var(--color-accent);
+}
+.btn-primary:hover {
+    background-color: var(--color-text-light);
+    color: var(--color-accent);
+}
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-text-light);
+    border: 2px solid var(--color-text-light);
+}
+.btn-secondary:hover {
+    background-color: var(--color-text-light);
+    color: var(--color-primary-bg);
+}
+/* General Section Styling */
+.section-padding {
+    padding: 100px 0;
+}
+.section-title {
+    font-family: var(--font-display);
+    font-size: 3.5em;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.section-subtitle {
+    font-family: var(--font-body);
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--color-text-dark);
+}
+.subsection-title {
+    font-family: var(--font-display);
+    font-size: 2.2em;
+    color: var(--color-text-light);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+/* About Section */
+.about-content {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+}
+.about-content p {
+    font-size: 1.1em;
+    color: var(--color-text-dark);
+    margin-bottom: 30px;
+}
+.why-choose-us .grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+.grid-cards .card {
+    background-color: var(--color-secondary-bg);
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--color-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.grid-cards .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+.card-icon {
+    font-size: 3.5em;
+    color: var(--color-accent);
+    margin-bottom: 20px;
+}
+.grid-cards h4 {
+    font-family: var(--font-display);
+    font-size: 1.6em;
+    color: var(--color-text-light);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.grid-cards p {
+    font-size: 0.95em;
+    color: var(--color-text-dark);
+}
+/* Services Section */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.service-item {
+    background-color: var(--color-secondary-bg);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--color-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+.service-icon {
+    font-size: 3.5em;
+    color: var(--color-accent);
+    margin-bottom: 20px;
+}
+.service-item h3 {
+    font-family: var(--font-display);
+    font-size: 1.8em;
+    color: var(--color-text-light);
+    margin-bottom: 15px;
+}
+.service-item p {
+    font-size: 1em;
+    color: var(--color-text-dark);
+}
+/* Portfolio Section - Before/After Slider */
+.before-after-sliders {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.before-after-slider {
+    background-color: var(--color-secondary-bg);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+.slider-title {
+    font-family: var(--font-display);
+    font-size: 2em;
+    text-align: center;
+    color: var(--color-text-light);
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 66.66%; 
+    background-color: #333;
+}
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.image-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.before-image {
+    clip-path: inset(0 50% 0 0);
+}
+.after-image {
+    clip-path: inset(0 0 0 50%);
+}
+/* Testimonials Section */
+.testimonial-carousel {
+    display: flex;
+    overflow: hidden; 
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--color-border);
+}
+.testimonial-item {
+    min-width: 100%; 
+    padding: 40px;
+    text-align: center;
+    background-color: var(--color-secondary-bg);
+    flex-shrink: 0;
+}
+.testimonial-item .stars {
+    color: gold;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+.testimonial-item p {
+    font-style: italic;
+    font-size: 1.1em;
+    color: var(--color-text-light);
+    margin-bottom: 20px;
+}
+.testimonial-item .customer-name {
+    font-weight: 600;
+    color: var(--color-accent);
+}
+.carousel-nav {
+    text-align: center;
+}
+.carousel-nav button {
+    background-color: var(--color-accent);
+    color: var(--color-text-light);
+    border: none;
+    padding: 10px 15px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.carousel-nav button:hover {
+    background-color: darken(var(--color-accent), 10%); 
+    transform: scale(1.05);
+}
+/* Footer/Contact Section */
+.footer-section {
+    background-color: var(--color-secondary-bg);
+    padding: 80px 0;
+    border-top: 1px solid var(--color-border);
+}
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+.contact-info,
+.contact-form-container,
+.map-container {
+    background-color: var(--color-primary-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--color-border);
+}
+.contact-info h3,
+.contact-form-container h3,
+.map-container h3 {
+    font-family: var(--font-display);
+    font-size: 1.8em;
+    color: var(--color-accent);
+    margin-bottom: 25px;
+}
+.contact-info p {
+    margin-bottom: 15px;
+    color: var(--color-text-dark);
+    font-size: 1.05em;
+}
+.contact-info p i {
+    margin-right: 10px;
+    color: var(--color-text-light);
+}
+.contact-info a {
+    color: var(--color-text-dark);
+}
+.social-media a {
+    font-size: 1.8em;
+    margin: 0 10px;
+    color: var(--color-text-light);
+    transition: color 0.3s ease;
+}
+.social-media a:hover {
+    color: var(--color-accent);
+}
+.contact-form input,
+.contact-form textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-secondary-bg);
+    color: var(--color-text-light);
+    border-radius: 5px;
+    font-family: var(--font-body);
+    font-size: 1em;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--color-text-dark);
+}
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-accent);
+    color: var(--color-text-light);
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.contact-form button:hover {
+    background-color: darken(var(--color-accent), 10%); 
+}
+.map-container iframe {
+    border-radius: 5px;
+    filter: grayscale(80%) invert(92%) contrast(80%); 
+}
+/* Fixed WhatsApp Button */
+.whatsapp-fixed-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366; 
+    color: var(--color-text-light);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8em;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.whatsapp-fixed-button span {
+    font-size: 0.6em;
+    margin-top: -5px;
+    font-family: var(--font-body);
+}
+.whatsapp-fixed-button:hover {
+    transform: scale(1.1);
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+.whatsapp-fixed-button {
+    animation: pulse 2s infinite ease-in-out;
+}
+/* Responsive Design */
+@media (max-width: 992px) {
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: var(--header-height);
+        right: 0;
+        background-color: var(--color-primary-bg);
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        border-top: 1px solid var(--color-border);
+    }
+    .main-nav.active {
+        display: flex;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .main-nav ul li {
+        margin: 15px 0;
+        text-align: center;
+    }
+    .language-switcher {
+        margin-top: 20px;
+        text-align: center;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    .hero-title {
+        font-size: 3.2em;
+    }
+    .hero-subtitle {
+        font-size: 1.2em;
+    }
+    .hero-buttons .btn {
+        padding: 12px 25px;
+        font-size: 0.9em;
+    }
+    .section-title {
+        font-size: 2.8em;
+    }
+    .subsection-title {
+        font-size: 1.8em;
+    }
+    .grid-cards .card,
+    .service-item {
+        padding: 30px;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .map-container {
+        order: 3; 
+    }
+    .whatsapp-fixed-button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5em;
+        bottom: 20px;
+        right: 20px;
+    }
+    .whatsapp-fixed-button span{
+        display: none; 
+    }
+}
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 2.5em;
+    }
+    .hero-subtitle {
+        font-size: 1em;
+    }
+    .hero-buttons {
+        flex-direction: column;
+    }
+    .hero-buttons .btn {
+        margin: 10px 0;
+        width: 80%;
+        max-width: 300px;
+    }
+    .section-title {
+        font-size: 2.2em;
+    }
+    .subsection-title {
+        font-size: 1.5em;
+    }
+    .grid-cards .card {
+        padding: 25px;
+    }
+    .card-icon {
+        font-size: 3em;
+    }
+    .service-item {
+        padding: 25px;
+    }
+    .service-icon {
+        font-size: 3em;
+    }
+    .testimonial-item {
+        padding: 30px 20px;
+    }
+    .testimonial-item p {
+        font-size: 1em;
+    }
+    .contact-info,
+    .contact-form-container,
+    .map-container {
+        padding: 20px;
+    }
+}
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    // Smooth Scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+            // Close mobile menu after clicking a link
+            if (mainNav.classList.contains('active')) {
+                mainNav.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
+        });
+    });
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    menuToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+    });
+    // Language Switcher
+    const langTRBtn = document.getElementById('lang-tr');
+    const langENBtn = document.getElementById('lang-en');
+    const translations = {
+        'tr': {
+            pageTitle: 'Hasan Usta Boyasız Göçük Düzeltme Merkezi',
+            navHome: 'Anasayfa',
+            navAbout: 'Hakkımızda',
+            navServices: 'Hizmetlerimiz',
+            navPortfolio: 'Portfolyo',
+            navContact: 'İletişim',
+            heroTitle: 'Aracınızın Orijinalliği Bozulmadan, Kusursuz Dokunuş.',
+            heroSubtitle: '1976\'dan günümüze uzanan köklü tecrübeyle Ankara\'da boyasız göçük düzeltme sanatının güvenilir adresi.',
+            btnAppointment: 'Hemen Randevu Al',
+            btnViewWorks: 'İşlerimizi İncele',
+            aboutTitle: 'Tarihçe & Hakkımızda',
+            aboutText: 'Hasan Usta, 1976 yılında mesleğe adım attığı günden bu yana, otomotiv sektöründe boyasız göçük düzeltme sanatının öncülerinden biri olmuştur. Yılların getirdiği bilgi birikimi ve titiz el işçiliği ile araçların orijinal yapısını bozmadan, ilk günkü estetiğine kavuşturmayı ilke edinmiştir. Bu uzun soluklu yolculukta, her zaman müşteri memnuniyetini ve kaliteyi en üst seviyede tutarak sektördeki güvenilirliğini kanıtlamıştır. Hasan Usta, sadece bir tamirci değil, aynı zamanda göçük düzeltme sanatının gerçek bir zanaatkarıdır.',
+            whyChooseUsTitle: 'Neden Bizi Seçmelisiniz?',
+            whyChooseUs1Title: 'Sigorta ve Kasko Anlaşmalı',
+            whyChooseUs1Text: 'Anlaşmalı olduğumuz sigorta şirketleri ile işlemlerinizi kolayca halledin.',
+            whyChooseUs2Title: 'Orijinalliği Koruma ve %100 Değer Kaybını Önleme',
+            whyChooseUs2Text: 'Aracınızın fabrika boyasını koruyarak değerini muhafaza ediyoruz.',
+            whyChooseUs3Title: 'Hızlı, Titiz ve Garantili Teslimat',
+            whyChooseUs3Text: 'Profesyonel ekibimizle hızlı ve güvenilir hizmet sunuyoruz.',
+            whyChooseUs4Title: 'Uzman Kadro ve Ekipman',
+            whyChooseUs4Text: 'En son teknoloji ekipmanlar ve uzman kadromuzla hizmetinizdeyiz.',
+            servicesTitle: 'Hizmetlerimiz',
+            service1Title: 'Boyasız Göçük Düzeltme',
+            service1Text: 'Aracınızdaki küçük ve orta ölçekli göçükleri boyaya zarar vermeden düzeltiyoruz.',
+            service2Title: 'Dolu Hasarı Onarımı',
+            service2Text: 'Dolu nedeniyle oluşan göçükleri profesyonel yöntemlerle gideriyoruz.',
+            service3Title: 'Park Hasarı Giderme',
+            service3Text: 'Küçük çarpmalar ve park sırasında oluşan hasarları gideriyoruz.',
+            portfolioTitle: 'İşlerimiz / Portfolyo',
+            portfolioSubtitle: 'Araçlarınızdaki değişimi kendiniz görün.',
+            portfolioCar1: 'Peugeot 2008',
+            portfolioCar2: 'Seat İbiza',
+            portfolioCar3: 'Audi A5',
+            testimonialsTitle: 'Müşteri Yorumları',
+            testimonial1Text: '"Hasan Usta ekibi aracımın göçüğünü boyasız bir şekilde kusursuz düzeltti. Çok memnun kaldım, kesinlikle tavsiye ederim!"',
+            testimonial1Name: '- Ayşe Yılmaz',
+            testimonial2Text: '"Hızlı ve profesyonel hizmet. Arabam sanki hiç hasar almamış gibi oldu. Teşekkürler Hasan Usta!"',
+            testimonial2Name: '- Mehmet Demir',
+            testimonial3Text: '"Göçük düzeltmede tek adresim artık. Orijinal boyayı korumaları harika."',
+            testimonial3Name: '- Zeynep Kaya',
+            contactTitle: 'İletişim',
+            contactInfoTitle: 'Bize Ulaşın',
+            address: 'Ozan Otonom, Plevne, Çatalca Sokağı No:14/44 Sincan/Ankara',
+            phone: '+90 533 021 59 43',
+            hours: 'Pazartesi - Cumartesi:   08:00 - 21:00',
+            contactFormTitle: 'Randevu Talep Formu',
+            formNamePlaceholder: 'Adınız Soyadınız',
+            formPhonePlaceholder: 'Telefon Numaranız',
+            formMessagePlaceholder: 'Mesajınız',
+            formSubmitButton: 'Gönder',
+            locationTitle: 'Konumumuz',
+            whatsappButtonText: 'WhatsApp'
+        },
+        'en': {
+            pageTitle: 'Hasan Usta Paintless Dent Repair Center',
+            navHome: 'Home',
+            navAbout: 'About Us',
+            navServices: 'Services',
+            navPortfolio: 'Portfolio',
+            navContact: 'Contact',
+            heroTitle: 'Flawless Touch Without Compromising Originality.',
+            heroSubtitle: 'Your trusted address for paintless dent repair in Ankara, with deep experience dating back to 1976.',
+            btnAppointment: 'Book an Appointment',
+            btnViewWorks: 'View Our Works',
+            aboutTitle: 'History & About Us',
+            aboutText: 'Since taking his first steps in the profession in 1976, Hasan Usta has been one of the pioneers of paintless dent repair in the automotive industry. With years of accumulated knowledge and meticulous craftsmanship, he has adopted the principle of restoring vehicles to their original aesthetics without damaging their factory structure. In this long journey, he has always proven his reliability in the industry by prioritizing customer satisfaction and quality at the highest level. Hasan Usta is not just a repairman, but a true artisan of dent repair.',
+            whyChooseUsTitle: 'Why Choose Us?',
+            whyChooseUs1Title: 'Insurance and Casco Agreements',
+            whyChooseUs1Text: 'Easily handle your transactions with our contracted insurance companies.',
+            whyChooseUs2Title: 'Preservation of Originality & 100% Value Retention',
+            whyChooseUs2Text: 'We maintain your vehicle\'s value by preserving its factory paint.',
+            whyChooseUs3Title: 'Fast, Meticulous and Guaranteed Delivery',
+            whyChooseUs3Text: 'We provide fast and reliable service with our professional team.',
+            whyChooseUs4Title: 'Expert Staff & Equipment',
+            whyChooseUs4Text: 'We are at your service with the latest technology equipment and our expert staff.',
+            servicesTitle: 'Our Services',
+            service1Title: 'Paintless Dent Repair',
+            service1Text: 'We repair small and medium-sized dents on your vehicle without damaging the paint.',
+            service2Title: 'Hail Damage Repair',
+            service2Text: 'We remove dents caused by hail with professional methods.',
+            service3Title: 'Parking Damage Removal',
+            service3Text: 'We repair minor collisions and damages incurred during parking.',
+            portfolioTitle: 'Our Works / Portfolio',
+            portfolioSubtitle: 'See the transformation of your vehicles yourself.',
+            portfolioCar1: 'Peugeot 2008',
+            portfolioCar2: 'Seat İbiza',
+            portfolioCar3: 'Audi A4',
+            testimonialsTitle: 'Customer Testimonials',
+            testimonial1Text: '"Hasan Usta\'s team perfectly repaired my car\'s dent without painting. I am very satisfied, I definitely recommend it!"',
+            testimonial1Name: '- Ayşe Yılmaz',
+            testimonial2Text: '"Fast and professional service. My car looks like it was never damaged. Thanks, Hasan Usta!"',
+            testimonial2Name: '- Mehmet Demir',
+            testimonial3Text: '"My only address for dent repair now. It\'s great that they preserve the original paint."',
+            testimonial3Name: '- Zeynep Kaya',
+            contactTitle: 'Contact',
+            contactInfoTitle: 'Reach Us',
+            address: 'Ozan Otonom, Plevne, Çatalca Street Number:14/44 Sincan/Ankara',
+            phone: '+90 533 021 59 43',
+            hours: 'Monday - Saturday: 08:00 AM - 09:00 PM',
+            contactFormTitle: 'Appointment Request Form',
+            formNamePlaceholder: 'Your Name Surname',
+            formPhonePlaceholder: 'Your Phone Number',
+            formMessagePlaceholder: 'Your Message',
+            formSubmitButton: 'Send',
+            locationTitle: 'Our Location',
+            whatsappButtonText: 'WhatsApp'
+        }
+    };
+    let currentLang = 'tr';
+    const updateContent = () => {
+        document.querySelectorAll('[data-translate]').forEach(element => {
+            const key = element.getAttribute('data-translate');
+            if (translations[currentLang][key]) {
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.placeholder = translations[currentLang][key];
+                } else {
+                    element.textContent = translations[currentLang][key];
+                }
+            }
+        });
+        // Update page title separately
+        document.title = translations[currentLang].pageTitle;
+    };
+    langTRBtn.addEventListener('click', () => {
+        currentLang = 'tr';
+        langTRBtn.classList.add('active');
+        langENBtn.classList.remove('active');
+        updateContent();
+    });
+    langENBtn.addEventListener('click', () => {
+        currentLang = 'en';
+        langENBtn.classList.add('active');
+        langTRBtn.classList.remove('active');
+        updateContent();
+    });
+    // Initialize content on page load
+    updateContent();
+    // AOS Initialization
+    AOS.init({
+        duration: 1000,
+        once: true,
+    });
+    // Before/After Slider (Conceptual - requires a library for full draggable functionality)
+    const sliders = document.querySelectorAll('.before-after-slider');
+    sliders.forEach(slider => {
+        const wrapper = slider.querySelector('.slider-wrapper');
+        const beforeImage = wrapper.querySelector('.before-image');
+        const afterImage = wrapper.querySelector('.after-image');
+        wrapper.addEventListener('mouseover', () => {
+            beforeImage.style.clipPath = 'inset(0 100% 0 0)';
+            afterImage.style.clipPath = 'inset(0 0 0 0)';
+        });
+        wrapper.addEventListener('mouseout', () => {
+            beforeImage.style.clipPath = 'inset(0 50% 0 0)';
+            afterImage.style.clipPath = 'inset(0 0 0 50%)';
+        });
+        // Add transition for clip-path to make it smooth
+        beforeImage.style.transition = 'clip-path 0.5s ease';
+        afterImage.style.transition = 'clip-path 0.5s ease';
+    });
+    // Testimonial Carousel
+    const testimonialCarousel = document.querySelector('.testimonial-carousel');
+    const carouselPrev = document.querySelector('.carousel-prev');
+    const carouselNext = document.querySelector('.carousel-next');
+    const testimonialItems = document.querySelectorAll('.testimonial-item');
+    let currentIndex = 0;
+    const updateCarousel = () => {
+        testimonialCarousel.style.transform = `translateX(${-currentIndex * 100}%)`;
+    };
+    carouselPrev.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : testimonialItems.length - 1;
+        updateCarousel();
+    });
+    carouselNext.addEventListener('click', () => {
+        currentIndex = (currentIndex < testimonialItems.length - 1) ? currentIndex + 1 : 0;
+        updateCarousel();
+    });
+    // Apply initial transform for smooth transition setup
+    testimonialCarousel.style.transition = 'transform 0.5s ease-in-out';
+});
+    </script>
+    <header class="main-header">
+        <div class="container">
+            <a href="#hero" class="logo">
+                <img src="WhatsApp Image 2026-05-23 at 16.28.58.jpeg" alt=""> 
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#hero" data-translate="navHome">Anasayfa</a></li>
+                    <li><a href="#about" data-translate="navAbout">Hakkımızda</a></li>
+                    <li><a href="#services" data-translate="navServices">Hizmetlerimiz</a></li>
+                    <li><a href="#portfolio" data-translate="navPortfolio">Portfolyo</a></li>
+                    <li><a href="#contact" data-translate="navContact">İletişim</a></li>
+                </ul>
+                <div class="language-switcher">
+                    <button id="lang-tr" class="lang-btn active">TR</button>
+                    <button id="lang-en" class="lang-btn">EN</button>
+                </div>
+            </nav>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <section id="hero" class="hero-section" style="background-image: url('hasanus.png');">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <h1 class="hero-title" data-translate="heroTitle" data-aos="fade-up" data-aos-delay="100">Aracınızın Orijinalliği Bozulmadan, Kusursuz Dokunuş.</h1>
+            <p class="hero-subtitle" data-translate="heroSubtitle" data-aos="fade-up" data-aos-delay="300">1976'dan günümüze uzanan köklü tecrübeyle Ankara'da boyasız göçük düzeltme sanatının güvenilir adresi.</p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="500">
+                <a href="#contact" class="btn btn-primary" data-translate="btnAppointment">Hemen Randevu Al</a>
+                <a href="#portfolio" class="btn btn-secondary" data-translate="btnViewWorks">İşlerimizi İncele</a>
+            </div>
+        </div>
+    </section>
+    <main>
+        <!-- About Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <h2 class="section-title" data-translate="aboutTitle" data-aos="fade-up">Tarihçe & Hakkımızda</h2>
+                <div class="about-content">
+                    <p data-translate="aboutText" data-aos="fade-up" data-aos-delay="100">
+                        Hasan Usta, 1976 yılında mesleğe adım attığı günden bu yana, otomotiv sektöründe boyasız göçük düzeltme sanatının öncülerinden biri olmuştur. Yılların getirdiği bilgi birikimi ve titiz el işçiliği ile araçların orijinal yapısını bozmadan, ilk günkü estetiğine kavuşturmayı ilke edinmiştir. Bu uzun soluklu yolculukta, her zaman müşteri memnuniyetini ve kaliteyi en üst seviyede tutarak sektördeki güvenilirliğini kanıtlamıştır. Hasan Usta, sadece bir tamirci değil, aynı zamanda göçük düzeltme sanatının gerçek bir zanaatkarıdır.
+                    </p>
+                    <div class="why-choose-us">
+                        <h3 class="subsection-title" data-translate="whyChooseUsTitle" data-aos="fade-up" data-aos-delay="200">Neden Bizi Seçmelisiniz?</h3>
+                        <div class="grid-cards">
+                            <div class="card" data-aos="fade-up" data-aos-delay="300">
+                                <i class="fas fa-handshake card-icon"></i>
+                                <h4 data-translate="whyChooseUs1Title">Sigorta ve Kasko Anlaşmalı</h4>
+                                <p data-translate="whyChooseUs1Text">Anlaşmalı olduğumuz sigorta şirketleri ile işlemlerinizi kolayca halledin.</p>
+                            </div>
+                            <div class="card" data-aos="fade-up" data-aos-delay="400">
+                                <i class="fas fa-car-alt card-icon"></i>
+                                <h4 data-translate="whyChooseUs2Title">Orijinalliği Koruma ve %100 Değer Kaybını Önleme</h4>
+                                <p data-translate="whyChooseUs2Text">Aracınızın fabrika boyasını koruyarak değerini muhafaza ediyoruz.</p>
+                            </div>
+                            <div class="card" data-aos="fade-up" data-aos-delay="500">
+                                <i class="fas fa-truck-fast card-icon"></i>
+                                <h4 data-translate="whyChooseUs3Title">Hızlı, Titiz ve Garantili Teslimat</h4>
+                                <p data-translate="whyChooseUs3Text">Profesyonel ekibimizle hızlı ve güvenilir hizmet sunuyoruz.</p>
+                            </div>
+                            <!-- <div class="card" data-aos="fade-up" data-aos-delay="600">
+                                <i class="fas fa-tools card-icon"></i>
+                                <h4 data-translate="whyChooseUs4Title">Uzman Kadro ve Ekipman</h4>
+                                <p data-translate="whyChooseUs4Text">En son teknoloji ekipmanlar ve uzman kadromuzla hizmetinizdeyiz.</p>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services Section -->
+        <section id="services" class="services-section section-padding">
+            <div class="container">
+                <h2 class="section-title" data-translate="servicesTitle" data-aos="fade-up">Hizmetlerimiz</h2>
+                <div class="services-grid">
+                    <div class="service-item" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-paint-roller service-icon"></i>
+                        <h3 data-translate="service1Title">Boyasız Göçük Düzeltme</h3>
+                        <p data-translate="service1Text">Aracınızdaki küçük ve orta ölçekli göçükleri boyaya zarar vermeden düzeltiyoruz.</p>
+                    </div>
+                    <div class="service-item" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-hammer service-icon"></i>
+                        <h3 data-translate="service2Title">Dolu Hasarı Onarımı</h3>
+                        <p data-translate="service2Text">Dolu nedeniyle oluşan göçükleri profesyonel yöntemlerle gideriyoruz.</p>
+                    </div>
+                    <div class="service-item" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-car-crash service-icon"></i>
+                        <h3 data-translate="service3Title">Park Hasarı Giderme</h3>
+                        <p data-translate="service3Text">Küçük çarpmalar ve park sırasında oluşan hasarları gideriyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio-section section-padding">
+            <div class="container">
+                <h2 class="section-title" data-translate="portfolioTitle" data-aos="fade-up">İşlerimiz / Portfolyo</h2>
+                <p class="section-subtitle" data-translate="portfolioSubtitle" data-aos="fade-up" data-aos-delay="100">Araçlarınızdaki değişimi kendiniz görün.</p>
+                <div class="before-after-sliders">
+                    <div class="before-after-slider" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="slider-title" data-translate="portfolioCar1">Peugeot 2008</h3>
+                        <div class="slider-wrapper">
+                            <div class="image-container">
+                                <img src="2008 önce.png" alt="Before Peugeot 2008" class="before-image">
+                                <img src="2008 sonra.png" alt="After Peugeot 2008" class="after-image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="before-after-slider" data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="slider-title" data-translate="portfolioCar2">Seat İbiza</h3>
+                        <div class="slider-wrapper">
+                            <div class="image-container">
+                                <img src="ibiza önce.png" alt="Before Seat İbiza" class="before-image">
+                                <img src="ibiza sonra.png" alt="After Seat ibiza" class="after-image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="before-after-slider" data-aos="fade-up" data-aos-delay="400">
+                        <h3 class="slider-title" data-translate="portfolioCar3">Audi A5</h3>
+                        <div class="slider-wrapper">
+                            <div class="image-container">
+                                <img src="a5 önce.png" alt="Before Audi A5" class="before-image">
+                                <img src="a5 sonra.png" alt="After Audi A5" class="after-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="contact" class="footer-section section-padding">
+        <div class="container">
+            <h2 class="section-title" data-translate="contactTitle" data-aos="fade-up">İletişim</h2>
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-up" data-aos-delay="100">
+                    <h3 data-translate="contactInfoTitle">Bize Ulaşın</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> <span data-translate="address">Ozan Otonom, Plevne, Çatalca Sokağı No:14/44 Sincan/Ankara</span></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+905330215943" data-translate="phone">+90 533 021 59 43</a></p>
+                    <p><i class="fas fa-clock"></i> <span data-translate="hours"><p></p></span></p>
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/hasanustaboyasizgocuk/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/people/Hasan-Usta-Boyas%C4%B1z-G%C3%B6%C3%A7%C3%BCk-Merkezi/61563765827893/?mibextid=ZbWKwL" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://api.whatsapp.com/send/?phone=905330215943&text&type=phone_number&app_absent=0" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form-container" data-aos="fade-up" data-aos-delay="200">
+                    <h3 data-translate="contactFormTitle">Randevu Talep Formu</h3>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Adınız Soyadınız" required data-translate="formNamePlaceholder">
+                        <input type="tel" placeholder="Telefon Numaranız" required data-translate="formPhonePlaceholder">
+                        <textarea placeholder="Mesajınız" rows="5" required data-translate="formMessagePlaceholder"></textarea>
+                        <button type="submit" class="btn btn-primary" data-translate="formSubmitButton">Gönder</button>
+                    </form>
+                </div>
+                <div class="map-container" data-aos="fade-up" data-aos-delay="300">
+                    <h3 data-translate="locationTitle">Konumumuz</h3>
+                    <iframe src="https://www.google.com/maps/place//data=!4m2!3m1!1s0x14d3318961099993:0xd291ad2d0b80bc79?sa=X&ved=1t:8290&ictx=111" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a href="https://api.whatsapp.com/send/?phone=905330215943&text&type=phone_number&app_absent=0" target="_blank" class="whatsapp-fixed-button" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
