@@ -696,7 +696,7 @@ a:hover {
             navContact: 'İletişim',
             heroTitle: 'Aracınızın Orijinalliği Bozulmadan, Kusursuz Dokunuş.',
             heroSubtitle: '1976\'dan günümüze uzanan köklü tecrübeyle Ankara\'da boyasız göçük düzeltme sanatının güvenilir adresi.',
-            btnAppointment: 'Hemen Randevu Al',
+            btnAppointment: 'Fiyat Al',
             btnViewWorks: 'İşlerimizi İncele',
             aboutTitle: 'Tarihçe & Hakkımızda',
             aboutText: 'Hasan Usta, 1976 yılında mesleğe adım attığı günden bu yana, otomotiv sektöründe boyasız göçük düzeltme sanatının öncülerinden biri olmuştur. Yılların getirdiği bilgi birikimi ve titiz el işçiliği ile araçların orijinal yapısını bozmadan, ilk günkü estetiğine kavuşturmayı ilke edinmiştir. Bu uzun soluklu yolculukta, her zaman müşteri memnuniyetini ve kaliteyi en üst seviyede tutarak sektördeki güvenilirliğini kanıtlamıştır. Hasan Usta, sadece bir tamirci değil, aynı zamanda göçük düzeltme sanatının gerçek bir zanaatkarıdır.',
@@ -733,11 +733,9 @@ a:hover {
             address: 'Ozan Otonom, Plevne, Çatalca Sokağı No:14/44 Sincan/Ankara',
             phone: '+90 533 021 59 43',
             hours: 'Pazartesi - Cumartesi:   08:00 - 21:00',
-            contactFormTitle: 'Randevu Talep Formu',
-            formNamePlaceholder: 'Adınız Soyadınız',
-            formPhonePlaceholder: 'Telefon Numaranız',
-            formMessagePlaceholder: 'Mesajınız',
-            formSubmitButton: 'Gönder',
+            quickQuoteTitle: 'Fotoğrafla Fiyat Al',
+            quickQuoteText: 'Aracınızdaki göçüğün veya hasarın fotoğrafını farklı açılardan çekip bize gönderin. Orijinalliği bozmadan yapılabilecek işlemi ve ortalama fiyatı anında iletelim.',
+            quickQuoteButton: 'WhatsApp\'tan Gönder',
             locationTitle: 'Konumumuz',
             whatsappButtonText: 'WhatsApp'
         },
@@ -750,7 +748,7 @@ a:hover {
             navContact: 'Contact',
             heroTitle: 'Flawless Touch Without Compromising Originality.',
             heroSubtitle: 'Your trusted address for paintless dent repair in Ankara, with deep experience dating back to 1976.',
-            btnAppointment: 'Book an Appointment',
+            btnAppointment: 'Get price',
             btnViewWorks: 'View Our Works',
             aboutTitle: 'History & About Us',
             aboutText: 'Since taking his first steps in the profession in 1976, Hasan Usta has been one of the pioneers of paintless dent repair in the automotive industry. With years of accumulated knowledge and meticulous craftsmanship, he has adopted the principle of restoring vehicles to their original aesthetics without damaging their factory structure. In this long journey, he has always proven his reliability in the industry by prioritizing customer satisfaction and quality at the highest level. Hasan Usta is not just a repairman, but a true artisan of dent repair.',
@@ -787,11 +785,9 @@ a:hover {
             address: 'Ozan Otonom, Plevne, Çatalca Street Number:14/44 Sincan/Ankara',
             phone: '+90 533 021 59 43',
             hours: 'Monday - Saturday: 08:00 AM - 09:00 PM',
-            contactFormTitle: 'Appointment Request Form',
-            formNamePlaceholder: 'Your Name Surname',
-            formPhonePlaceholder: 'Your Phone Number',
-            formMessagePlaceholder: 'Your Message',
-            formSubmitButton: 'Send',
+            quickQuoteTitle: 'Get a Quote via Photo',
+            quickQuoteText: 'Send us photos of the dent or damage on your vehicle from different angles. We will instantly let you know the possible repair process without ruining the originality and the estimated price.',
+            quickQuoteButton: 'Send via WhatsApp',
             locationTitle: 'Our Location',
             whatsappButtonText: 'WhatsApp'
         }
@@ -1017,38 +1013,44 @@ a:hover {
                         <a href="https://api.whatsapp.com/send/?phone=905330215943&text&type=phone_number&app_absent=0" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-                            <div class="contact-form-container" style="text-align: center;" data-aos="fade-up" data-aos-delay="200">
-    <style>
-        .btn-outline-orange {
-            display: block;
-            background-color: transparent;
-            color: var(--color-accent);
-            border: 2px solid var(--color-accent);
-            font-family: var(--font-body);
-            font-weight: 700;
-            font-size: 1.2em;
-            padding: 15px;
-            border-radius: 5px;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        .btn-outline-orange:hover {
-            background-color: var(--color-accent);
-            color: var(--color-text-light);
-        }
-    </style>
-    
-    <h3 data-translate="quickQuoteTitle">Fotoğrafla Fiyat Al</h3>
-    <i class="fas fa-camera" style="font-size: 3.5em; color: var(--color-accent); margin-bottom: 20px;"></i>
-    <p style="margin-bottom: 25px; font-size: 1.05em; color: var(--color-text-dark);" data-translate="quickQuoteText">
-        Aracınızdaki göçüğün veya hasarın fotoğrafını farklı açılardan çekip bize gönderin. Orijinalliği bozmadan yapılabilecek işlemi ve ortalama fiyatı anında iletelim.
-    </p>
-    <a href="https://api.whatsapp.com/send/?phone=905330215943&text=Merhaba, aracımdaki göçük için fotoğraf gönderip fiyat almak istiyorum." target="_blank" class="btn-outline-orange">
-        <i class="fab fa-whatsapp" style="margin-right: 10px; font-size: 1.2em;"></i> WhatsApp'tan Gönder
-    </a>
-</div>
+                        <div class="contact-form-container" style="text-align: center;" data-aos="fade-up" data-aos-delay="200">
+                    <style>
+                        .btn-outline-orange {
+                            display: block;
+                            background-color: transparent;
+                            color: var(--color-accent);
+                            border: 2px solid var(--color-accent);
+                            font-family: var(--font-body);
+                            font-weight: 700;
+                            font-size: 1.2em;
+                            padding: 15px;
+                            border-radius: 5px;
+                            text-transform: uppercase;
+                            transition: all 0.3s ease;
+                            cursor: pointer;
+                            text-decoration: none;
+                        }
+
+                        .btn-outline-orange:hover {
+                            background-color: var(--color-accent);
+                            color: var(--color-text-light);
+                        }
+                    </style>
+
+                    <h3 data-translate="quickQuoteTitle">Fotoğrafla Fiyat Al</h3>
+                    <i class="fas fa-camera"
+                        style="font-size: 3.5em; color: var(--color-accent); margin-bottom: 20px;"></i>
+                    <p style="margin-bottom: 25px; font-size: 1.05em; color: var(--color-text-dark);"
+                        data-translate="quickQuoteText">
+                        Aracınızdaki göçüğün veya hasarın fotoğrafını farklı açılardan çekip bize gönderin. Orijinalliği
+                        bozmadan yapılabilecek işlemi ve ortalama fiyatı anında iletelim.
+                    </p>
+                    <a href="https://api.whatsapp.com/send/?phone=905330215943&text=Merhaba, aracımdaki göçük için fotoğraf gönderip fiyat almak istiyorum."
+                        target="_blank" class="btn-outline-orange">
+                        <i class="fab fa-whatsapp" style="margin-right: 10px; font-size: 1.2em;"></i> <span
+                            data-translate="quickQuoteButton">WhatsApp'tan Gönder</span>
+                    </a>
+                </div>
                 <div class="map-container" data-aos="fade-up" data-aos-delay="300">
                     <h3 data-translate="locationTitle">Konumumuz</h3>
                     <iframe src="https://maps.google.com/maps?q=Ozan+Otonom,+Plevne,+%C3%87atalca+Soka%C4%9F%C4%B1+No:14/44+Sincan/Ankara&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
